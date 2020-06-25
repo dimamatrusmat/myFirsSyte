@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: proxima, Arial, sans-serif;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    color: #000;
+    overflow-wrap: break-word;
+}
+.container {
+    max-width: 100%;
+    min-width: 320px;
+}
+.wrap {
+    max-width: 1500px;
+    min-width: 290px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/*header*/
+
+.header {
+    background: url(../img/header/back_head.jpg) center top no-repeat #000;
+    background-size: cover;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+}
+.header__info {
+    margin: 16.6% auto;
+}
+.header__title {
+    color: #fff;
+    font-size: 60px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 36px;
+    font-weight: normal;
+}
+.header__subtitle {
+    text-align: center;
+}
+.header__link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 30px;
+    color: #f84545;
+    line-height: 75px;
+    font-weight: bold;
+    letter-spacing: 12px;
+    transition: letter-spacing 0.3s;
+}
+.header__link:hover {
+    letter-spacing: 15px;
+}
+.header__btn {
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    width: 84px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.wrap__btn {
+    padding-bottom: 65px;
+}
+.header__btn:hover {
+    transform: translateY(-10px);
+}
+
+/*logo*/
+.logo__link {
+    display: block;
+}
+.logo__img {
+    display: block;
+    max-width: 100%;
+}
+/*menu*/
+
+.menu__list {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 90px;
+}
+.menu__item {
+    color: #fff;
+    font-size: 22.5px;
+    line-height: 2.222;
+    letter-spacing: 6.3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 65px;
+}
+.menu__item:first-child {
+    margin-left: 0;
+}
+.menu__link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+.menu--black .menu__list {
+    color: #000;
+}
+.menu--black .menu__list {
+    justify-content: start;
+}
+.menu__link:hover,
+.menu__link:active,
+.menu__link:focus,
+.menu--black .menu__link:hover,
+.menu--black .menu__link:active,
+.menu--black .menu__link:focus {
+    color: #f84545;
+}
+/*main*/
+
+.content__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 462px));
+    grid-gap: 57px;
+    margin: 85px auto;
+}
+.content__link {
+    grid-column: span 1;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    background: url(../img/main/Shoes.jpg) no-repeat #000;
+    background-size: cover;
+
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+}
+.content__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgb(26, 26, 26) 0%, rgba(26, 26, 26, 0) 100%);
+    z-index: -1;
+    z-index: -1;
+}
+.content__link:nth-child(1) {
+    padding-top: 44.8%;
+}
+.content__link:nth-child(2) {
+    background-image: url(../img/main/man.jpg);
+}
+.content__link:nth-child(3) {
+    background-image: url(../img/main/Girl.jpg);
+}
+.content__link:nth-child(4) {
+    background-image: url(../img/main/niga.jpg);
+}
+.content__link:nth-child(5) {
+    background-image: url(../img/main/back.jpg);
+}
+.content__link:nth-child(6) {
+    background-image: url(../img/main/man_bad.jpg);
+}
+.content__link--two {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+.content__link--pt {
+    padding-top: 77.9%;
+}
+.content__icon {
+    align-items: flex-start;
+    display: block;
+    margin-bottom: 30px;
+}
+.content__icon--1 {
+    width: 195px;
+    height: 191px;
+}
+.content__icon--2 {
+    width: 81px;
+    height: 96px;
+}
+.content__icon--3 {
+    width: 140px;
+    height: 96px;
+}
+.content__icon--4 {
+    width: 275px;
+    height: 68px;
+}
+.content__icon--5 {
+    width: 110px;
+    height: 95px;
+}
+.content__icon--6 {
+    width: 183px;
+    height: 97px;
+}
+.content__name {
+    font-size: 40px;
+    color: white;
+    line-height: 45px;
+    letter-spacing: 16px;
+    transition: color 0.3s;
+}
+.content__name--big {
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 24px;
+}
+.content__link:hover .content__name {
+    color: #f84545;
+}
+
+/*instagram*/
+.instagram {
+    z-index: 1;
+}
+.instagram__wrap {
+    background: url(../img/main_foot/inst.jpg) center top no-repeat #212122;
+    background-size: cover;
+    z-index: 1;
+    opacity: 1;
+    padding: 4% 0;
+}
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+}
+.instagram__info {
+    margin: 16.6% auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.instagram__title {
+    color: #fff;
+    font-size: 60px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 36px;
+    font-weight: normal;
+}
+.instagram__subtitle {
+    text-align: center;
+}
+.instagram__link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 30px;
+    color: #f84545;
+    line-height: 75px;
+    font-weight: bold;
+    letter-spacing: 12px;
+    transition: letter-spacing 0.3s;
+}
+.instagram__link:hover {
+    letter-spacing: 15px;
+}
+
+/*footer*/
+
+.footer {
+    padding: 40px 0;
+}
+.footer__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu--black .menu__link {
+    color: rgb(26, 26, 26);
+}
+.menu--black:hover {
+    color: #f84545;
+}
+.footer__socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.socials__item {
+    list-style: none;
+    margin: 0 18px;
+}
+
+.socials__link img {
+    width: 26px;
+    height: 26px;
+}
+@import "media";
