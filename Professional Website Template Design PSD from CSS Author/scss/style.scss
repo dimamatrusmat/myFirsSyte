@@ -1,0 +1,290 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: rgb(148, 148, 148);
+    font-family: "Open Sans", sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__bg {
+        background: url(../img/header/bg.png) no-repeat center center;
+        background-size: cover;
+    }
+    &__top {
+        margin-top: 50px;
+        margin-bottom: 70px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__menu {
+        display: flex;
+    }
+    &__li {
+        margin-right: 50px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        color: #fff;
+    }
+    .arrow {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 70%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .left {
+        left: -10%;
+    }
+    .right {
+        right: -10%;
+    }
+    &__slider {
+        display: flex;
+        align-items: flex-start;
+        &-img {
+            position: relative;
+            top: 60px;
+        }
+        &-text {
+            margin-left: 75px;
+        }
+        &-title {
+            margin-top: 100px;
+            font-size: 64.63px;
+            font-family: "SegoeWPN";
+            color: rgb(255, 255, 255);
+            line-height: 1.2;
+        }
+        &-subtitle {
+            font-size: 44.63px;
+            margin-bottom: 40px;
+            font-family: "SegoeWPN";
+            color: rgb(255, 255, 255);
+            line-height: 1.2;
+        }
+        &-btn {
+            background-color: #296f4e;
+            border: 4px solid #313332;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 22.63px;
+            font-family: "SegoeWPN";
+            color: rgb(255, 255, 255);
+            font-weight: 300;
+            line-height: 1.2;
+        }
+    }
+}
+.main {
+    &__top {
+        &-block {
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            .active {
+                border: 1px solid #dedede;
+                border-bottom: none;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                    width: 100%;
+                    height: 5px;
+                    background-color: #fff;
+                }
+                .main__top-item-title {
+                    font-size: 26.63px;
+                    color: rgb(95, 95, 95);
+                }
+            }
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 25px 55px 0;
+            &-img {
+                margin-bottom: 25px;
+            }
+            &-title {
+                font-size: 24.63px;
+                font-family: "SegoeWPN";
+                color: rgb(92, 91, 91);
+                line-height: 1.2;
+                text-align: center;
+                margin-bottom: 50px;
+                transition: all 0.3s linear;
+            }
+        }
+    }
+    &__text {
+        display: flex;
+        border: 1px solid #dedede;
+        flex-direction: column;
+        padding-right: 80px;
+        padding-left: 60px;
+        &-img {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-title {
+            font-size: 38.63px;
+            color: rgb(79, 79, 79);
+            line-height: 1.2;
+            margin-bottom: 40px;
+            margin-top: 70px;
+        }
+        &-subtitle {
+            margin-bottom: 30px;
+            font-size: 14px;
+            font-family: "UniversCE";
+            color: rgb(129, 129, 129);
+            line-height: 1.714;
+        }
+    }
+    &__why {
+        display: flex;
+        margin-top: 30px;
+        align-items: flex-start;
+        margin-bottom: 100px;
+        &-img {
+            max-width: 455px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-text {
+            margin-left: 55px;
+        }
+        &-title {
+            margin-bottom: 30px;
+        }
+        &-li {
+            margin-left: 20px;
+            margin-bottom: 26px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -30px;
+                top: 56%;
+                transform: translateY(-50%);
+                background: url(../img/main/okey.svg) no-repeat;
+                width: 18px;
+                height: 20px;
+            }
+        }
+    }
+    &__form {
+        display: grid;
+        align-items: center;
+        grid-gap: 70px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 35px;
+        &-item {
+            padding: 25px 20px 25px 27px;
+            border-radius: 5px;
+            &-title {
+                font-size: 28px;
+                font-family: "SegoeWP";
+                color: rgb(255, 255, 255);
+                line-height: 0.75;
+                margin-bottom: 25px;
+            }
+            &-iput {
+                font-size: 16px;
+                font-family: "SegoeWPN";
+                color: rgb(79, 79, 79);
+                line-height: 2.375;
+                margin-right: 5px;
+                border: none;
+                padding-left: 10px;
+            }
+            &-btn {
+                font-size: 16px;
+                font-family: "SegoeWPN";
+                color: rgb(255, 255, 255);
+                line-height: 2.375;
+                background-color: #444;
+                padding: 0px 16px;
+                border: none;
+            }
+        }
+        &-left {
+            background-color: #e67624;
+            .main__form-item-iput {
+                width: 155px;
+            }
+        }
+        &-right {
+            background-color: #01d4f3;
+            .main__form-item-iput {
+                width: 266px;
+            }
+        }
+    }
+}
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 2fr;
+    grid-gap: 90px;
+    padding: 40px 0 50px;
+    &__bg {
+        background-color: #282a2d;
+    }
+    &__item {
+        &-title {
+            font-size: 22px;
+            font-family: "SegoeWP";
+            color: rgb(255, 255, 255);
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        &-subtitle {
+            margin-bottom: 10px;
+            font-size: 13px;
+            font-family: "Arial";
+            color: rgba(255, 255, 255, 0.502);
+            line-height: 1.692;
+            span {
+                color: #fff;
+            }
+        }
+        img {
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+    }
+}
